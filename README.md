@@ -1,2 +1,1 @@
-# my-simple-blockchain
-Built by myself blockchain
+# My Simple Blockchain

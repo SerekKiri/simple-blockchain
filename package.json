@@ -1,0 +1,22 @@
+{
+  "name": "my-simple-blockchain",
+  "version": "1.0.0",
+  "description": "Simple blockchain i javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerekKiri/my-simple-blockchain.git"
+  },
+  "author": "SerekKiri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SerekKiri/my-simple-blockchain/issues"
+  },
+  "homepage": "https://github.com/SerekKiri/my-simple-blockchain#readme",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
