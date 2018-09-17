@@ -12,7 +12,7 @@ class Transaction{
 class Block {
     constructor(timestamp, transactions, previousHash = '') {
         this.previousHash = previousHash
-        this.timestamp = timestamp
+        this.timestamp = new Date().toString()
         this.transactions = transactions
         this.hash = this.calculateHash()
         this.nonce = 0
@@ -28,7 +28,7 @@ class Block {
             this.hash = this.calculateHash()
         }
 
-        console.log("BLOCK MINED: " + this.hash)
+        console.log("Block mined: " + this.hash + '\n')
     }
 }
 
@@ -36,7 +36,7 @@ class Block {
 class Blockchain{
     constructor() {
         this.chain = [this.createGenesisBlock()]
-        this.difficulty = 2
+        this.difficulty = 4
         this.pendingTransactions = []
         this.miningReward = 1
     }
@@ -107,11 +107,14 @@ class Blockchain{
 
         return true
     }
+
 }
 
 let saveCoin = new Blockchain()
-console.log('\n Starting the miner...')
+console.log('Starting the miner...\n')
 
-saveCoin.addBlock(new Block(0, 'ddd'))
+for (let i = 1; i <= saveCoin.chain.length; i++) {
+    saveCoin.minePendingTransactions(new Transaction('ddd', 'ddd', 100))
+}
 
 console.log(JSON.stringify(saveCoin.chain, null, 4))
