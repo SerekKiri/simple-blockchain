@@ -8,18 +8,22 @@
 How to run?
 
 - Install depedencies
+
     ```
     npm install
     ```
 - To run on development
+
     ```
     cd src
     ```
     Example
+
     ```
     node index.js
     ```
     For developming I recommend
+
     ```
     npx nodemon index.js
     ```
